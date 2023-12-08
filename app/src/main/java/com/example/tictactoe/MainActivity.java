@@ -1,8 +1,10 @@
 package com.example.tictactoe;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -79,7 +81,23 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void endGame(String s) {
-
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("More Info");
+        String msg = "This is the message body";
+        builder.setMessage(msg);
+        builder.setPositiveButton("EXIT", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+           // Exit handling
+            }
+        });
+        builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+            // Cancel handling
+            }
+        });
+        AlertDialog dialog = builder.show();
         //show winner
     }
 
