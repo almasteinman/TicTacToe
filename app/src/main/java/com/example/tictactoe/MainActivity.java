@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
         if (view.getId() == R.id.btn_11)
             handleClick(1, 1, R.id.btn_11);
         if (view.getId() == R.id.btn_12)
-            handleClick(0, 2, R.id.btn_12);
+            handleClick(1, 2, R.id.btn_12);
         if (view.getId() == R.id.btn_20)
             handleClick(2, 0, R.id.btn_20);
         if (view.getId() == R.id.btn_21)
