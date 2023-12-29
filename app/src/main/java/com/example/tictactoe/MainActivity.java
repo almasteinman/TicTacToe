@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
 import android.content.DialogInterface;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -83,8 +84,7 @@ public class MainActivity extends AppCompatActivity {
     private void endGame(String s) {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("More Info");
-        String msg = "This is the message body";
-        builder.setMessage(msg);
+        builder.setMessage(s);
         builder.setPositiveButton("EXIT", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
